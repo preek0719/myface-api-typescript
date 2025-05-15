@@ -1,0 +1,76 @@
+@use "../mainStyling" as mainStyling;
+
+$border: 1px #2985FF solid;
+
+#postsContainer {
+    // @include body(white);
+    justify-content: center;
+    list-style: none;
+    display: flex;    
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 32px;
+    row-gap: 32px;
+}
+
+#postsList {
+    flex-basis: 20%;
+    background-color: grey;
+}
+
+#postImages {
+    flex-flow: row wrap;
+    // margin-bottom: 10px;
+    width: 100%;
+    flex-shrink: 1;
+}
+
+#postmessage, #postedBy {
+        flex-shrink: 1;
+}
+
+#likes_dislikes {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr;
+    justify-content: left;
+    grid-gap: 15px;
+}
+
+#like-form {
+    grid-column: 1;
+    grid-row: 1;
+    text-align: left;
+}
+
+#dislike-form {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+}
+
+#like-button {
+    @include mainStyling.button(rgb(47, 65, 111));
+    font-size: 20px;
+    line-height: 30px;
+    // border: $border;
+    color: beige;
+
+}
+
+#dislike-button {
+    @include mainStyling.button(rgb(47, 65, 111));
+    font-size: 20px;
+    line-height: 30px;
+    // border: $border;
+    color: beige;
+
+}
+
+@media only screen and (max-width: 750px) and (min-width: 375px) {
+    #postsList {
+        flex-basis: 40%;
+    }
+
+}
