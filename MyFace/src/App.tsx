@@ -2,6 +2,9 @@ import React from 'react';
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import {PostsPage} from "./PostsPage/PostsPage"
 import {UsersPage} from "./UsersPage/UsersPage";
+import {CreatePost} from "./CreatePost/CreatePost";
+import {CreateUser} from "./CreateUser/CreateUser"
+import {CreateUser2} from "./CreateUser/CreateUser2"
 
 export function App() {
   return (
@@ -11,10 +14,12 @@ export function App() {
       <Routes>
         <Route path="/posts" 
           element={<PostsPage />}/>
-          {/* <Route path="/createposts" 
-          element={<CreatePostsPage />}/> */}
+          <Route path="/createposts" 
+          element={<CreatePost />}/>
         <Route path="/users"
            element={<UsersPage/>}/>
+        <Route path="/createusers"
+           element={<CreateUser/>}/>   
         <Route path="*"
           element={<div>
             Sorry - that page doesn't exist, try these:

@@ -26,6 +26,7 @@
     "kill-port": "^2.0.1",
     "knex": "^0.21.16",
     "moment": "^2.29.1",
+    "react-hook-form": "^7.56.3",
     "react-router-dom": "^7.6.0",
     "sass": "^1.88.0",
     "sqlite3": "^5.0.0",
