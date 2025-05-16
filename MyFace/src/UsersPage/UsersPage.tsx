@@ -29,7 +29,7 @@ export function UsersPage() {
                         <p id='username'><b>{user.name}</b></p>
                         <img id='userProfileImage' src={user.profileImageUrl}></img>
                     </li>)}
-            </ul>
+            </ul>            
         </div>
     );
 }
