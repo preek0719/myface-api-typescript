@@ -1,73 +1,33 @@
-
-.createUserLabel {
-    width:100%;
-    display: grid;
-    position: relative;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 1px;
-    justify-content: left;
-    margin-bottom: 24px;
-    height: 30px;
-    align-items: center;
-  }
-.createUserLabel {
-    width: 100%;
-    grid-column: 1;
-    grid-row: 1;
+label {
+    display: block;
+    // margin-bottom: 5px;
+    margin-left: 20px;
 }
 
-
-#nameInput {
+input {
     width: 100%;
-    grid-column: 2;
-    grid-row: 1;
-}
-.userName {
-    width: 100%;
-    grid-column: 1;
-    grid-row: 2;
-}
-#userNameInput {
-    width: 100%;
-    grid-column: 2;
-    grid-row: 2;
-}
-.email {
-    width: 100%;
-    grid-column: 1;
-    grid-row: 3;
-}
-#emailInput {
-    width: 100%;
-    grid-column: 2;
-    grid-row: 3;
-}
-.profileImageUrl {
-    width: 100%;
-    grid-column: 1;
-    grid-row: 4;
-}
-#profileImageUrlInput {
-    width: 100%;
-    grid-column: 2;
-    grid-row: 4;
-}
-.coverImageUrl {
-    width: 100%;
-    grid-column: 1;
-    grid-row: 5;
-}
-#coverImageUrlInput {
-    width: 100%;
-    grid-column: 2;
-    grid-row: 5;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
-.createUserLabel input {
-    height: 25px;
+button[type="submit"] {
+    margin-left: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: gray;
+    color: black;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
 }
 
-
-
-
-
+.error {
+    margin-left: 20px;
+    color: red;
+    font-style: italic;
+}
