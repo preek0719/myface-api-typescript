@@ -26,12 +26,12 @@ export function CreateUser() {
             type: 'required', message: ''});
     };
     
-    // useEffect(() => {
-    //     setError("firstLastname", {
-    //         type: 'required', message: ''});
-    //     setError("firstLastname", {
-    //         type: 'pattern', message: ''}) ;   
-    // }, [setError])  
+    useEffect(() => {
+        setError("firstLastname", {
+            type: 'required', message: ''});
+        setError("firstLastname", {
+            type: 'pattern', message: ''}) ;   
+    }, [setError])  
 
 
     const onSubmit = () => {
@@ -64,8 +64,10 @@ export function CreateUser() {
             <form method="post" action="/users/create" onSubmit={handleSubmit(onSubmit)}>
                 <label className="createUserLabel"></label>
                 <p id="name">Name:</p>
-                <input className="nameInput" type="text" placeholder="Enter name here" {...register('firstLastname', {required: true, pattern:/[a-zA-Z ]+/ })} />  
-                {errors.username && <span className="error">Name is required, should not contain spaces and should only contain alphabets</span>}
+                <input className="nameInput" type="text" placeholder="Enter name here" {...register('firstLastname', {required: true, pattern:/[a-zA-Z ]+/ })} /> 
+                {errors.firstLastname && <span className="error">Name is required and should only contain alphabets</span>}
+                {/* {errors.firstLastname && errors.firstLastname.type[required] && <span className="error">{errors.firstLastname.type.required}</span>}
+                {errors.firstLastname && errors.firstLastname.type["pattern"] && <span className="error">{errors.firstLastname.type.pattern}</span>} */}
                  
                 <label className="createUserLabel"></label>
                 <p id="userName">Username:</p>
@@ -75,7 +77,7 @@ export function CreateUser() {
                 <label className="createUserLabel"></label>
                 <p id="email">Email:</p>
                 <input className="emailInput" type="email" placeholder="Enter your email" {...register('email', { required: true, pattern: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ })} />
-                {errors.username && <span className="error">Email is required and should be in the right format</span>}
+                {errors.email && <span className="error">Email is required and should be in the right format</span>}
 
                 <label className="createUserLabel"></label>
                 <p id="profileImageUrl">Profile Image Url:</p>
