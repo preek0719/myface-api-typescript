@@ -1,10 +1,9 @@
 import React from 'react';
 import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
-import {PostsPage} from "./PostsPage/PostsPage"
+import {PostsPage} from "./PostsPage/PostsPage";
 import {UsersPage} from "./UsersPage/UsersPage";
 import {CreatePost} from "./CreatePost/CreatePost";
-// import {CreateUser} from "./CreateUser/CreateUser"
-import {CreateUser} from "./CreateUser/CreateUser3"
+import {CreateUser} from "./CreateUser/CreateUser";
 
 export function App() {
   return (
