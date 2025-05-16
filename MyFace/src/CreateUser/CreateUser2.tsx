@@ -19,6 +19,8 @@ export function CreateUser2() {
     // const[profileImage, setProfileImage] = useState<string>("");
     // const[coverImage, setCoverImage] = useState<string>("");
 
+    
+
     const { register, handleSubmit, formState: { errors } } = useForm({
         defaultValues: {
             uname: "",
